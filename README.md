@@ -119,6 +119,7 @@ project-root/
 │   ├── routes/
 │   ├── errros/
 │   ├── utils/
+    ├── test/
 │   └── app.js
 ├── .env
 ├── .gitignore
@@ -134,6 +135,7 @@ project-root/
 - **JWT**: For handling authentication tokens.
 - **Nodemailer**: For email functionality.
 - **BCrypt.js**: For password hashing.
+- **Jest.js**: For unit testing.
 
 ## GitHub Authentication Setup
 1. Go to [GitHub Developer Settings](https://github.com/settings/developers) and create a new OAuth application.
