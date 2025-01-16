@@ -1,0 +1,1 @@
+module.exports = async (DELAY_TIME = process.env.DELAY_TIME) => await new Promise(resolve => setTimeout(resolve, DELAY_TIME))

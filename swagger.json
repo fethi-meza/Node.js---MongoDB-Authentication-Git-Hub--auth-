@@ -1,0 +1,299 @@
+{
+ "swagger": "2.0",
+ "info": {
+   "contact": {},
+   "title": "Full-Auth",
+   "version": "1.0.0"
+ },
+ "basePath": "/api/v1",
+ "paths": {
+   "/auth/reset-password": {
+     "post": {
+       "consumes": [
+         "application/json"
+       ],
+       "parameters": [
+         {
+           "in": "query",
+           "name": "token",
+           "type": "string"
+         },
+         {
+           "in": "query",
+           "name": "email",
+           "type": "string"
+         },
+         {
+           "in": "body",
+           "name": "body",
+           "schema": {
+             "properties": {
+               "email": {
+                 "example": "fethi-dev@gmail.com",
+                 "type": "string"
+               },
+               "password": {
+                 "example": "password",
+                 "type": "string"
+               },
+               "token": {
+                 "example": "06027be8738ea7d287c112e1652d1bc940e34de0b3a3da9e23a5a6598f2518e7c38f96767ab4859cee96ba70ce908e94d7b0a8ae729a455a60b4a428464825d5a09852885ecc",
+                 "type": "string"
+               }
+             },
+             "type": "object"
+           }
+         }
+       ],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "ResetPassword",
+       "operationId": "resetpassword",
+       "summary": "ResetPassword"
+     }
+   },
+   "/auth/forgot-password": {
+     "post": {
+       "consumes": [
+         "application/json"
+       ],
+       "parameters": [
+         {
+           "in": "body",
+           "name": "body",
+           "schema": {
+             "properties": {
+               "email": {
+                 "example": "fethi-dev@gmail.com",
+                 "type": "string"
+               }
+             },
+             "type": "object"
+           }
+         }
+       ],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "ForgotPassword",
+       "operationId": "forgotpassword",
+       "summary": "ForgotPassword"
+     }
+   },
+   "/auth/github": {
+     "get": {
+       "parameters": [],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "GithubLogin",
+       "operationId": "githublogin",
+       "summary": "GithubLogin"
+     }
+   },
+   "/auth/github/callback": {
+     "get": {
+       "parameters": [],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "githubCallback",
+       "operationId": "githubcallback",
+       "summary": "githubCallback"
+     }
+   },
+   "/auth/login": {
+     "post": {
+       "consumes": [
+         "application/json"
+       ],
+       "parameters": [
+         {
+           "in": "body",
+           "name": "body",
+           "schema": {
+             "properties": {
+               "email": {
+                 "example": "fethi-dev@gmail.com",
+                 "type": "string"
+               },
+               "password": {
+                 "example": "fethi_password",
+                 "type": "string"
+               }
+             },
+             "type": "object"
+           }
+         }
+       ],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "Login",
+       "operationId": "login",
+       "summary": "Login"
+     }
+   },
+   "/auth/logout": {
+     "delete": {
+       "parameters": [],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "Logout",
+       "operationId": "logout",
+       "summary": "Logout"
+     }
+   },
+   "/auth/me": {
+     "get": {
+       "parameters": [],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "ShowMe",
+       "operationId": "showme",
+       "summary": "ShowMe"
+     }
+   },
+   "/auth/register": {
+     "post": {
+       "consumes": [
+         "application/json"
+       ],
+       "parameters": [
+         {
+           "in": "body",
+           "name": "body",
+           "schema": {
+             "properties": {
+               "email": {
+                 "example": "fethi-dev@gmail.com",
+                 "type": "string"
+               },
+               "name": {
+                 "example": "fethi",
+                 "type": "string"
+               },
+               "password": {
+                 "example": "password",
+                 "type": "string"
+               }
+             },
+             "type": "object"
+           }
+         }
+       ],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "Register",
+       "operationId": "register",
+       "summary": "Register"
+     }
+   },
+   "/auth/update": {
+     "patch": {
+       "consumes": [
+         "application/json"
+       ],
+       "parameters": [
+         {
+           "in": "body",
+           "name": "body",
+           "schema": {
+             "properties": {},
+             "type": "object"
+           }
+         }
+       ],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "UpdateUser",
+       "operationId": "updateuser",
+       "summary": "UpdateUser"
+     }
+   },
+   "/auth/verify-email": {
+     "get": {
+       "consumes": [
+         "application/json"
+       ],
+       "parameters": [
+         {
+           "in": "body",
+           "name": "body",
+           "schema": {
+             "properties": {
+               "email": {
+                 "example": "fethi-dev@gmail.com",
+                 "type": "string"
+               },
+               "otp": {
+                 "example": "264317",
+                 "type": "string"
+               }
+             },
+             "type": "object"
+           }
+         }
+       ],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "VerifyEmail",
+       "operationId": "verifyemail",
+       "summary": "VerifyEmail"
+     }
+   },
+   "/dashboard": {
+     "get": {
+       "parameters": [],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "dashboard",
+       "operationId": "dashboard",
+       "summary": "dashboard"
+     }
+   },
+   "/protected": {
+     "get": {
+       "parameters": [],
+       "responses": {
+         "200": {
+           "description": ""
+         }
+       },
+       "description": "Protected",
+       "operationId": "protected",
+       "summary": "Protected"
+     }
+   }
+ },
+ "tags": []
+}

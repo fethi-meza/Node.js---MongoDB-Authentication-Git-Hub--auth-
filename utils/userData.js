@@ -1,0 +1,1 @@
+module.exports = (user) => ({ userID: user._id, username: user.username, role: user.role })
